@@ -12,6 +12,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* <PlayState > */}
+        <Tween from={{ x: "100vw" }} duration="5">
+          <h1 className="App-logo">SIMONE</h1>
+        </Tween>
+        {/* </PlayState> */}
+        {/* <h1 className="App-logo">SIMONE</h1> */}
         <img src={logo} id="logo" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
