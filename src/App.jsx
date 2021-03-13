@@ -54,6 +54,9 @@ function App() {
           />
         </Tween> */}
       </header>
+      <section>
+        <div className="planet" />
+      </section>
     </div>
   );
 }

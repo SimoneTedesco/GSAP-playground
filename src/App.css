@@ -2,13 +2,17 @@
 
 .App {
   text-align: center;
+  background: url("./static/mission_cielo.jpg") center center repeat;
+  background-size: contain;
+  min-height: 100vh;
+  overflow: hidden;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
   font-family: "Lato", sans-serif;
   transform: skewy(-11deg);
@@ -29,19 +33,26 @@ body {
 } */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+
   display: flex;
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
-  background: url("./static/mission_cielo.jpg") center center no-repeat;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.planet {
+  /* top: 50vh; */
+  width: 300vh;
+  height: 300vh;
+  margin-top: 40vh;
+  background: url("./static/mission_pianeta_p24.png") top center no-repeat;
 }
 
 @keyframes App-logo-spin {
