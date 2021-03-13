@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* <PlayState > */}
-        <Tween from={{ x: "100vw" }} duration="5">
+        <Tween from={{ x: "100vw", y: "75vh" }} duration="2">
           <h1 className="App-logo">SIMONE</h1>
         </Tween>
         {/* </PlayState> */}
         {/* <h1 className="App-logo">SIMONE</h1> */}
-        <img src={logo} id="logo" className="App-logo" alt="logo" />
+        {/* <img src={logo} id="logo" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -29,7 +29,6 @@ function App() {
         >
           <a
             className="App-link"
-            // href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => moveLogo()}
@@ -39,7 +38,6 @@ function App() {
         </Tween>
         <a
           className="App-link"
-          // href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => moveLogo()}
@@ -54,7 +52,7 @@ function App() {
           <div
             style={{ width: "100px", height: "100px", background: "#ccc" }}
           />
-        </Tween>
+        </Tween> */}
       </header>
     </div>
   );
