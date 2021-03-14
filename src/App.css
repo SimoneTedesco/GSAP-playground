@@ -6,6 +6,9 @@
   background-size: contain;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 body {
   overflow: hidden;
@@ -53,6 +56,12 @@ body {
   height: 300vh;
   margin-top: 40vh;
   background: url("./static/mission_pianeta_p24.png") top center no-repeat;
+  background-size: 100% auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes App-logo-spin {
