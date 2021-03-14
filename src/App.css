@@ -2,8 +2,8 @@
 
 .App {
   text-align: center;
-  background: url("./static/mission_cielo.jpg") center center repeat;
-  background-size: contain;
+  background: url("./static/mission_cielo.jpg") center center no-repeat;
+  background-size: cover;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
