@@ -2,8 +2,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-import { Controls, PlayState, Tween } from "react-gsap";
+import { Controls, PlayState, Tween, TweenMax } from "react-gsap";
 import planetImg from "./static/mission_pianeta_p24.png";
+import donnaDx from "./static/mission_sprite_bandieradx.svg";
+import donnaSx from "./static/mission_sprite_bandierasx.svg";
 
 function App() {
   // useEffect(() => gsap.to("#logo", { duration: 2, y: 330 }));
@@ -17,9 +19,19 @@ function App() {
   };
   const goBack = () => {
     setPlanetRotation(planetRotation + 90);
+    gsap.to("#donnaDx", {
+      duration: 1,
+      backgroundPositionY: 0,
+      ease: "steps(5)",
+    });
   };
   const goForward = () => {
     setPlanetRotation(planetRotation - 90);
+    gsap.to("#donnaDx", {
+      duration: 1,
+      backgroundPositionY: -1500,
+      ease: "steps(5)",
+    });
   };
   return (
     <div className="App">
@@ -31,6 +43,8 @@ function App() {
       </header>
       <div className="buttons">
         <button onClick={goBack}>indietro</button>
+        <div id="donnaDx" />
+        {/* <img id="donnaDx" src={donnaDx} alt="asd" /> */}
         <button onClick={goForward}>avanti</button>
       </div>
       <section
