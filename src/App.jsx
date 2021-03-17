@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import gsap from "gsap";
-import { Controls, PlayState, Tween, TweenMax } from "react-gsap";
+import { Tween } from "react-gsap";
 import planetImg from "./static/mission_pianeta_p24.png";
-import donnaDx from "./static/mission_sprite_bandieradx.svg";
-import donnaSx from "./static/mission_sprite_bandierasx.svg";
 
 function App() {
   // useEffect(() => gsap.to("#logo", { duration: 2, y: 330 }));
