@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import gsap from "gsap";
-import { Tween } from "react-gsap";
+import { Tween, Reveal } from "react-gsap";
 import planetImg from "./static/mission_pianeta_p24.png";
 
 function App() {
@@ -31,46 +31,77 @@ function App() {
     });
   };
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <PlayState > */}
-        <Tween from={{ x: "100vw", y: "75vh" }} duration="2" ease="back">
-          <h1 className="App-logo">SIMONE</h1>
-        </Tween>
-      </header>
-      <div className="buttons">
-        <button onClick={goBack}>indietro</button>
-        <div id="donnaDx" />
-        {/* <img id="donnaDx" src={donnaDx} alt="asd" /> */}
-        <button onClick={goForward}>avanti</button>
-      </div>
-      <section
-        style={{
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          maxHeight: "40vh",
-        }}
-      >
-        <Tween
-          to={{
-            width: "100vw",
-            rotation: planetRotation,
-            width: "300%",
-            height: "300%",
+    <>
+      <div className="App">
+        <header className="App-header">
+          {/* <PlayState > */}
+          <Tween from={{ x: "100vw", y: "75vh" }} duration="2" ease="back">
+            <h1 className="App-logo">SIMONE</h1>
+          </Tween>
+        </header>
+        <div className="buttons">
+          <button onClick={goBack}>indietro</button>
+          <div id="donnaDx" />
+          {/* <img id="donnaDx" src={donnaDx} alt="asd" /> */}
+          <button onClick={goForward}>avanti</button>
+        </div>
+        <section
+          style={{
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            maxHeight: "40vh",
           }}
-          duration={1}
         >
-          {/* <div className="planet" /> */}
-          <img
-            src={planetImg}
-            className="planet-img"
-            alt="asd"
-            // style={{ width: "300%", height: "300%" }}
-          />
+          <Tween
+            to={{
+              width: "100vw",
+              rotation: planetRotation,
+              width: "300%",
+              height: "300%",
+            }}
+            duration={1}
+          >
+            {/* <div className="planet" /> */}
+            <img
+              src={planetImg}
+              className="planet-img"
+              alt="asd"
+              // style={{ width: "300%", height: "300%" }}
+            />
+          </Tween>
+        </section>
+      </div>
+      {/* <Tween
+        to={{
+          scrollTrigger: ".box", // start the animation when ".box" enters the viewport (once)
+          x: 500,
+          y: 500,
+        }}
+      > */}
+      <section className="box">asd</section>
+      <Reveal repeat>
+        <Tween from={{ opacity: 0 }} duration={2}>
+          <section
+            className="boxbox"
+            style={{
+              height: "300px",
+              width: "300px",
+              backgroundColor: "green",
+            }}
+          >
+            asd
+          </section>
         </Tween>
+      </Reveal>
+      <section
+        className="boxbox"
+        style={{ height: "300px", width: "300px", backgroundColor: "red" }}
+      >
+        asd
       </section>
-    </div>
+      {/* </Tween> */}
+    </>
   );
 }
 

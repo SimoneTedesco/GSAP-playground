@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .App-logo {
