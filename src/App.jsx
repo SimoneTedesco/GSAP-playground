@@ -3,6 +3,8 @@ import { useState } from "react";
 import gsap from "gsap";
 import { Tween, Reveal } from "react-gsap";
 import planetImg from "./static/mission_pianeta_p24.png";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   // useEffect(() => gsap.to("#logo", { duration: 2, y: 330 }));
@@ -94,12 +96,18 @@ function App() {
           </section>
         </Tween>
       </Reveal>
-      <section
-        className="boxbox"
-        style={{ height: "300px", width: "300px", backgroundColor: "red" }}
+      <Tween
+        to={{ scrollTrigger: { trigger: ".box", markers: true }, opacity: 0 }}
+        duration={2}
       >
-        asd
-      </section>
+        <section
+          className="boxbox"
+          style={{ height: "300px", width: "300px", backgroundColor: "red" }}
+        >
+          asd
+        </section>
+      </Tween>
+
       {/* </Tween> */}
     </>
   );
