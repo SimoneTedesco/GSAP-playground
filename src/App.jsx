@@ -9,13 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   // useEffect(() => gsap.to("#logo", { duration: 2, y: 330 }));
   const [planetRotation, setPlanetRotation] = useState(0);
-  const moveLogo = () => {
-    gsap.to(".App-logo", { duration: 2, y: 800 });
-  };
+  // const moveLogo = () => {
+  //   gsap.to(".App-logo", { duration: 2, y: 800 });
+  // };
 
-  const rotate = (deg) => {
-    gsap.to(".planet-img", { rotate: deg, duration: 1 });
-  };
+  // const rotate = (deg) => {
+  //   gsap.to(".planet-img", { rotate: deg, duration: 1 });
+  // };
   const goBack = () => {
     setPlanetRotation(planetRotation + 90);
     gsap.to("#donnaDx", {
@@ -59,7 +59,7 @@ function App() {
             to={{
               width: "100vw",
               rotation: planetRotation,
-              width: "300%",
+              // width: "300%",
               height: "300%",
             }}
             duration={1}
