@@ -84,6 +84,12 @@ function App() {
       <section className="box" style={{ height: "500px" }}>
         asd
       </section>
+      {/* TODO: usare matrix:
+        1o e 4o scale
+        2o e 3o inclinazione
+        5o e 6o posizione
+      */}
+      {/* transform: matrix(1, 0, 0, 1, 0, 0); */}
       {/* <Reveal repeat>
         <Tween from={{ opacity: 0 }} duration={2}>
           <section
@@ -117,7 +123,6 @@ function App() {
           asd
         </section>
       </Tween>
-
       {/* </Tween> */}
     </>
   );
