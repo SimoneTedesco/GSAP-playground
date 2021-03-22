@@ -81,8 +81,10 @@ function App() {
           y: 500,
         }}
       > */}
-      <section className="box">asd</section>
-      <Reveal repeat>
+      <section className="box" style={{ height: "500px" }}>
+        asd
+      </section>
+      {/* <Reveal repeat>
         <Tween from={{ opacity: 0 }} duration={2}>
           <section
             className="boxbox"
@@ -95,14 +97,22 @@ function App() {
             asd
           </section>
         </Tween>
-      </Reveal>
+      </Reveal> */}
       <Tween
-        to={{ scrollTrigger: { trigger: ".box", markers: true }, opacity: 0 }}
-        duration={2}
+        to={{
+          scrollTrigger: { trigger: ".box", markers: true },
+          opacity: 1,
+        }}
+        duration={5}
       >
         <section
           className="boxbox"
-          style={{ height: "300px", width: "300px", backgroundColor: "red" }}
+          style={{
+            height: "300px",
+            width: "300px",
+            backgroundColor: "red",
+            opacity: 0,
+          }}
         >
           asd
         </section>
