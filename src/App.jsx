@@ -88,14 +88,14 @@ function App() {
             scrollTrigger: {
               trigger: ".box",
               markers: true,
-              toggleActions: "play reverse resume reverse",
+              toggleActions: "restart pause reverse pause",
             },
             opacity: 1,
             x: 300,
             ease: "steps(5)",
             backgroundPositionY: -1500,
           }}
-          duration={2}
+          duration={1}
         >
           <div id="donnaDx" />
         </Tween>
@@ -120,25 +120,27 @@ function App() {
           </section>
         </Tween>
       </Reveal> */}
-      <Tween
-        to={{
-          scrollTrigger: { trigger: ".box", markers: true },
-          opacity: 1,
-        }}
-        duration={5}
-      >
-        <section
-          className="boxbox"
-          style={{
-            height: "300px",
-            width: "300px",
-            backgroundColor: "red",
-            opacity: 0,
+      <section style={{ height: "100vh" }}>
+        <Tween
+          to={{
+            scrollTrigger: { trigger: ".box", markers: true },
+            opacity: 1,
           }}
+          duration={5}
         >
-          asd
-        </section>
-      </Tween>
+          <div
+            className="boxbox"
+            style={{
+              height: "300px",
+              width: "300px",
+              backgroundColor: "red",
+              opacity: 0,
+            }}
+          >
+            asd
+          </div>
+        </Tween>
+      </section>
       {/* </Tween> */}
     </>
   );
