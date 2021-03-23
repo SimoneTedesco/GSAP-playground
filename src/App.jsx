@@ -81,8 +81,24 @@ function App() {
           y: 500,
         }}
       > */}
-      <section className="box" style={{ height: "500px" }}>
+      <section className="box buttons" style={{ height: "500px" }}>
         asd
+        <Tween
+          to={{
+            scrollTrigger: {
+              trigger: ".box",
+              markers: true,
+              toggleActions: "play reverse resume reverse",
+            },
+            opacity: 1,
+            x: 300,
+            ease: "steps(5)",
+            backgroundPositionY: -1500,
+          }}
+          duration={2}
+        >
+          <div id="donnaDx" />
+        </Tween>
       </section>
       {/* TODO: usare matrix:
         1o e 4o scale
