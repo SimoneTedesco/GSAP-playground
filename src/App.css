@@ -92,6 +92,15 @@ body {
   right: 0;
   top: -100px;
 }
+.line {
+  width: 100%;
+  max-width: 800px;
+  height: 8px;
+  margin: 0 0 10px 0;
+  position: relative;
+  display: inline-block;
+  background-color: rgb(221, 30, 30);
+}
 
 @keyframes App-logo-spin {
   from {
