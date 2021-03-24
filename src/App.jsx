@@ -88,7 +88,9 @@ function App() {
             scrollTrigger: {
               trigger: ".box",
               markers: true,
-              toggleActions: "restart pause reverse pause",
+              // toggleActions: "restart pause reverse pause",
+              toggleActions: "restart none none none",
+              scrub: true,
             },
             opacity: 1,
             x: 300,
@@ -120,11 +122,17 @@ function App() {
           </section>
         </Tween>
       </Reveal> */}
-      <section style={{ height: "100vh" }}>
+      <section id="red" style={{ height: "100vh" }}>
         <Tween
           to={{
-            scrollTrigger: { trigger: ".box", markers: true },
-            opacity: 1,
+            scrollTrigger: {
+              trigger: "#red",
+              markers: true,
+              scrub: true,
+              toggleActions: "play none none none",
+              pin: true,
+            },
+            x: 800,
           }}
           duration={5}
         >
@@ -134,7 +142,6 @@ function App() {
               height: "300px",
               width: "90%",
               backgroundColor: "red",
-              opacity: 0,
             }}
           >
             asd slowmo
