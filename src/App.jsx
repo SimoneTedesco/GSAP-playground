@@ -124,13 +124,21 @@ function App() {
       </Reveal> */}
       <section id="red" style={{ height: "100vh" }}>
         <Tween
+          from={{
+            x: -400,
+          }}
           to={{
             scrollTrigger: {
               trigger: "#red",
-              markers: true,
-              scrub: true,
-              toggleActions: "play none none none",
-              pin: true,
+              markers: {
+                startColor: "green",
+                endColor: "red",
+              }, // mostra segni sullo schermo inizio e fine animazione
+              // scrub: true, // scroll collegato all'animazione
+              scrub: 1, // scroll collegato all'animazione
+              toggleActions: "play none none none", //onenter onleave onreenter onreleave
+              pin: true, // dovrebbe bloccare l'item sullo schermo
+              start: "top center", // primo valore si riferisce all'oggetto e il secondo viewport
             },
             x: 800,
           }}
@@ -158,7 +166,12 @@ function App() {
                 scrub: true,
                 pin: true,
                 start: "top top",
-                end: "+=1000%",
+                end: "+=1000",
+                markers: {
+                  startColor: "blue",
+                  endColor: "blue",
+                  fontSize: "12px",
+                },
               },
               scaleX: 0,
               transformOrigin: "left center",
