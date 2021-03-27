@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { Tween, Reveal } from "react-gsap";
 import planetImg from "./static/mission_pianeta_p24.png";
@@ -16,6 +16,26 @@ function App() {
   // const rotate = (deg) => {
   //   gsap.to(".planet-img", { rotate: deg, duration: 1 });
   // };
+
+  useEffect(() => {
+    gsap.to("section", {
+      scrollTrigger: {
+        trigger: "body",
+        // markers: {
+        //   startColor: "green",
+        //   endColor: "red",
+        // }, // mostra segni sullo schermo inizio e fine animazione
+        // scrub: true, // scroll collegato all'animazione
+        scrub: 1, // scroll collegato all'animazione
+        // toggleActions: "play none none none", //onenter onleave onreenter onreleave
+        // pin: true, // dovrebbe bloccare l'item sullo schermo
+        // start: "top center", // primo valore si riferisce all'oggetto e il secondo viewport
+      },
+      // duration: 1,
+      // backgroundPositionY: 0,
+      // ease: "steps(5)",
+    });
+  }, []);
   const goBack = () => {
     setPlanetRotation(planetRotation + 90);
     gsap.to("#donnaDx", {
@@ -99,7 +119,27 @@ function App() {
           }}
           duration={1}
         >
-          <div id="donnaDx" />
+          <div id="donnaDx" style={{ top: 0 }} />
+        </Tween>
+        <Tween
+          to={{
+            scrollTrigger: {
+              trigger: ".box",
+              markers: true,
+              // toggleActions: "restart pause reverse pause",
+              toggleActions: "restart none none none",
+              scrub: true,
+              pin: true,
+              start: "top top",
+            },
+            opacity: 1,
+            // x: 300,
+            ease: "steps(5)",
+            backgroundPositionY: -1500,
+          }}
+          duration={1}
+        >
+          <div id="donnaDx" style={{ top: 0 }} />
         </Tween>
       </section>
       {/* TODO: usare matrix:
